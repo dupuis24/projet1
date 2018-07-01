@@ -1,7 +1,7 @@
-import numpy as np
-
-def main():
-    print ("hello worldssss")
+from flask import Flask
+app = Flask(__name__)
 
 
-main()
+@app.route("/")
+def hello_world():
+  return "Hello, World!"
