@@ -1,7 +1,6 @@
-from flask import Flask
-app = Flask(__name__)
+import requests
 
 
-@app.route("/")
-def hello_world():
-  return "Hello, World!"
+print(open("requete.xml","r"))
+response = requests.post("https://creator.zoho.com/api/670083415/xml/gestion/form/event/record/add",open("requete.xml","r"))
+print(response.text)
